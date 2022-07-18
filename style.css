@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  /*Primary Color Variables*/
+  --pr-brightOrange: hsl(31, 77%, 52%);
+  --pr-darkCyan: hsl(184, 100%, 22%);
+  --pr-VeryDarkCyan: hsl(179, 100%, 13%);
+
+  /*Secondary Color Variables*/
+  --White: hsl(0, 0%, 100%);
+  --TransparentWhite: hsla(0, 0%, 100%, 0.75);
+  --verylightGray: hsl(0, 0%, 95%);
+
+  /*Font Variables*/
+  --font-family-primary: "Big Shoulders Display", cursive;
+  --font-family-secondary: "Lexend Deca", sans-serif;
+
+  /*Font Weight Variables*/
+  --Bold: 700;
+  --regular: 400;
+}
+
+/* reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  background-color: var(--verylightGray);
+}
+
+.cardWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  max-width: max-content;
+  transform: scale(1.3);
+}
+
+/* Basic Card styling */
+.Card {
+  text-align: center;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5rem;
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.Card .header {
+  font-size: 1.5rem;
+  font-family: var(--font-family-primary);
+  font-weight: var(--Bold);
+  color: var(--verylightGray);
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.Sedans {
+  background-color: var(--pr-brightOrange);
+  border-radius: .3rem 0 0 .3rem;
+}
+.SUV {
+  background-color: var(--pr-darkCyan);
+}
+.LUX {
+  background-color: var(--pr-VeryDarkCyan);
+    border-radius: 0 .3rem .3rem 0;
+}
+
+.Card p {
+  font-family: var(--font-family-secondary);
+  font-weight: var(--regular);
+  color: var(--TransparentWhite);
+  text-transform: none;
+  max-width: 12rem;
+  max-height: 8rem;
+  font-size: 0.7rem;
+  line-height: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.Card .btn {
+  background-color: var(--verylightGray);
+  text-decoration: none;
+  font-family: var(--font-family-secondary);
+  font-weight: var(--Bold);
+  font-size: 0.8rem;
+  padding: 0.7rem 1.7rem;
+  border: none;
+  border-radius: 25rem;
+  color: black;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  mix-blend-mode: screen;
+  margin: 1rem 0;
+}
+
+/* attribution section */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 50px;
+  overflow: hidden;
+}
+.footerblk {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--White);
+  font-family: var(--font-family-primary);
+  font-size: 0.8rem;
+  padding-top: 0.2rem;
+  text-align: center;
+  transition: 300ms ease-in-out;
+}
+
+/* @Media for detecting hover capability if true adds hover anim */
+@media (hover: hover) {
+  footer:hover .footerblk {
+    transform: translateY(-0%);
+  }
+  .footerblk {
+    transform: translateY(100%);
+    text-align: center;
+    transition: 300ms ease-in-out;
+  }
+}
