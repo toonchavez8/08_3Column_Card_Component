@@ -38,6 +38,7 @@ p {
 
 body {
   background-color: var(--verylightGray);
+  scroll-behavior: smooth;
 }
 
 .cardWrapper {
@@ -67,9 +68,12 @@ body {
   text-align: left;
   gap: 2rem;
   padding: 2rem;
+  transition: 400ms ease-in-out;
+}
+img {
+
   transition: 300ms ease-in-out;
 }
-
 .Card .header {
   font-size: 1.5rem;
   font-family: var(--font-family-primary);
@@ -141,7 +145,7 @@ footer {
   align-items: center;
   width: 100%;
   background-color: var(--White);
-  font-family: var(--font-family-primary);
+  font-family: var(--font-family-secondary);
   font-size: 0.8rem;
   padding-top: 0.2rem;
   text-align: center;
@@ -180,13 +184,18 @@ footer {
 
 /* media quiery for mobile  */
 @media screen and (max-width: 600px) {
+
+
+  .cardWrapper {
+  top:85%;
+
+  }
   
   .Flex-container {
     flex-direction: column;
     transform: scale(1);
-    margin: 5rem 0;
-    overflow: scroll;
-    scroll-behavior: smooth;
+    margin: 1rem 0;
+
   }
 
   .Card {
@@ -194,7 +203,9 @@ footer {
     align-items: flex-start;
     text-align: left;
     gap: .5rem;
-    padding: 1rem;
+    padding: 2rem;
+    padding-top: 2.5rem;
+    min-width: 12rem;
   }
   .Card .header {
     font-size: 1.2rem;
@@ -210,11 +221,34 @@ footer {
     font-weight: var(--regular);
     color: var(--TransparentWhite);
     text-transform: none;
-    max-width: 12rem;
+    max-width: 11rem;
     max-height: 8rem;
     font-size: 0.7rem;
     line-height: 1.3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     transition: 300ms ease-in-out;
+  }
+
+  .Sedans {
+    border-radius: 0.3rem .3rem 0 0rem;
+  }
+
+  .LUX {
+    border-radius: 0 0 0.3rem .3rem;
+  }
+
+  footer {
+    position: absolute;
+    bottom: -75%;
+    width: 100%;
+    padding-top: 50px;
+    overflow: hidden;
+  }
+
+  .btn:active {
+    background-color: black;
+    border: 2px solid var(--verylightGray);
+    mix-blend-mode: screen;
+    color: var(--White);
   }
 }
